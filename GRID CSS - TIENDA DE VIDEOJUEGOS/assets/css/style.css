@@ -1,0 +1,33 @@
+.app {                                              /*  CLASS DE BODY */
+    background: #f1f1f1;
+    display: grid;                                  /*  Configura la web para que tome el formate de GRID  */                               
+    font-family: Arial, Helvetica, sans-serif;
+    grid-template-areas:                            /*  Define las areas que se utilizaran en la web    */
+        "header"
+        "contenido"
+        "footer";
+    grid-template-columns: auto;                    /*  Configura el tamaño de las columnas (Seria el tamaño total de la pantalla del navegador.)   */
+    grid-template-rows: 50px auto auto;             /*  Configura el tamaño de las filas: 50px-->header y automatico-->contenido y el footer    */
+}
+
+.encabezado {
+    align-items: center;
+    display:flex;
+    grid-area: header;                              /*  Asigna el area que definido anteriormente (.app)    */
+    padding: 0 2rem;
+    background: #f1f1f1;                          /*  Color del fondo*/
+    
+}
+.contenido {
+    grid-area: contenido;                           /*  Asigna el area que definido anteriormente (.app)    */
+    padding: 0 2rem;
+}
+
+.rodapie { 
+    background: #fdfdfd;                          /*  Color del fondo*/
+    color: #333333;
+    grid-area: footer;                              /*  Asigna el area que definido anteriormente (.app)    */
+    padding: 1rem;
+    text-align: center;
+    
+}

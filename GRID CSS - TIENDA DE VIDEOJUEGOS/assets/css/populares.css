@@ -1,0 +1,79 @@
+.populares {
+    padding: 3rem 0;                        /*  Crea un espaciamiento con respecto a la seccion de destacados   */
+}
+
+.populares__contenido {
+    display: flex;                         /*   Comportamiento flex*/
+    flex-wrap: wrap;                       /*   Los elementos se adaptaran al espacio disponible*/
+    padding: 1rem 0rem;                    /*   Espacimiento 1rem arriba y abajo y 0rem a los laterales */
+}
+
+.populares__card {
+    background: #fdfdfd;                /*  Define de fondo de la tarjeta, color blanco     */
+    display: grid;                        /*  Define el comportamiento y la distribucion de los elementos como un grid  */  
+    grid-template-areas:                  /*  Defino las areas que se utilizara en el grid     */               
+        "card-imagem"
+        "card-corpo";
+    grid-template-columns: 100%;          /*  Utiliza el 100% de la columna     */  
+    grid-template-rows: 173px auto;       /*  Define el tamaño de las filas  173px de altura y ancho automatico*/
+    margin-right: 1rem;                   /*  Define el tamaño de los margenes de la derecha  */
+    width: calc(20% - 1rem);              /*  Asigna el 20 % por columna menos un minimo espacio entre cada fila  */
+}
+
+.populares__card:last-child {
+    margin-right: 0;
+}
+
+.populares__card___imagen {
+    grid-area: card-imagem;             /*  Asigna el area que fue definida anteriormente   */
+    height: 100%;                       /*  Define que el elemento utilizara el total de la altura del area asignada    */
+    width: 100%;                        /*  Define que el elemento utilizara el total del ancho del area asignada    */
+}
+
+.populares__card___base {
+    display: grid;                      /*  Se configura para que se comporte como una grid. Sera una grid dentro de otra grid*/
+    grid-area: card-corpo;              /*  Asigna el area que fue definida anteriormente en el grid padre  */
+    grid-row-gap: .5rem;                /*  Define el espacio entre las filas */
+    grid-template-areas:                /*  Se definen las areas del grid    */
+        "card-header"
+        "card-contenido";
+    grid-template-rows: 50px auto;      /*  Configura el tamaño de las filas: 50px para el header y automatico para el contenido*/
+    padding: .75rem;
+}
+
+.populares__card___titulo {
+    color: #333333;
+    font-size: 1.5rem;
+}
+
+.populares__card___data {
+    color: #808080;
+    font-size: .9rem;
+}
+
+.populares__card___descripcion {
+    color: #333333;                 
+    line-height: 1.5;
+    margin: 1rem 0;
+    text-align: justify;
+}
+
+.populares__titulo {
+    font-weight: 500;
+}
+
+.populares__icon {
+    margin-right: .25rem;
+}
+
+.populares__header {
+    border-bottom: 1px solid #dcdcdc;           /*   Crea un borde de 1 px solido de color gris   */
+    display: flex;
+    justify-content: space-between;
+}
+
+.populares__boton {
+    background: transparent;
+    border: none;
+    color: #333333;
+}

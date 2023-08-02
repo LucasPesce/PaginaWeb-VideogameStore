@@ -1,0 +1,78 @@
+/*  CSS DEL AREA DE DESTACADOS  */
+.box {                              /*Configura las cajas de nuestro grids*/
+    align-items: flex-end;          /*   Alinea los elementos de las box con respecto al final   */
+    display: flex;                  /*   Distribucion de los elementos estilo flex   */    
+    justify-content: center;        /*   El justificado del contenido se centra en el grid  */
+}
+
+.destaques {
+    display: grid;                                                      /*  Configura el comportamiento de la seccion Destaques, como la de un GRID*/
+    grid-gap: .2rem;                                                    /*  Configura un espaciamiento entre los grids   */
+    grid-template-columns: 25% 25% 25% 25%;                             /*  Definimos la cantidad y el tamaño de todas las COLUMNAS que conforman nuestra seccion-*/
+    grid-template-rows: 33.33% 33.33% 33.33%;                           /*  Definimos la cantidad y el tamaño de todas las FILAS que conforman nuestra seccion*/
+    height: calc(100vh - 50px);                                         /*  Definimos la altura de la seccion, que se obtiene al calcular el 100% de la pantalla que cominece despues del encabezado que mide 50px*/
+}
+
+.destaques__titulo {                                                    /*  Los titulos que aparecen en cada grid   */
+    background: rgba(0, 0, 0, .5);                                    /*  Se le asigna un fondo color negro, con transparencia.  */
+    color: #fdfdfd;                                                   /*  Define color de la letra blanco*/
+    padding: .6rem;
+    text-align: center;                                                 /*  Alinea los titulos al centro del grid   */
+    width: 100%;                                                        /*  Define que el titulo ocupe el 100% del ancho del grid   */
+}
+
+.destaques__principal {
+    background: url('../img/fortnite.jpg') center / cover no-repeat;    /*  Define la imagen como fondo, la centra, escalado estilo cover y se configura para no repeeterise   */
+    grid-column: 1 / 4;                                                 /*  Defini la cantidad de columnas que ocupara la imagen de fondo asignada  */
+    grid-row: 1 / 3;                                                    /*  Defini la cantidad de filas que ocupara la imagen de fondo asignada */
+}
+
+.destaques__secundario:nth-child(2) {                                   /*  ":nth-child(2)" Define el cuadrante donde se esta configurando  */
+    background: url('../img/pubg.jpg') center / cover no-repeat;        
+    grid-column: 4 / 4;
+    grid-row: 1 / 1;
+}
+
+.destaques__secundario:nth-child(3) {
+    background: url('../img/slack.png') center / cover no-repeat;
+    grid-column: 4 / 4;
+    grid-row: 2 / 2;
+}
+
+.destaques__secundario:nth-child(4) {
+    background: url('../img/whatsapp.png') center / cover no-repeat;
+    grid-column: 4 / 4;
+    grid-row: 3 / 3;
+}
+
+.destaques__secundario:nth-child(5) {
+    background: url('../img/cs-go.jpg') center / cover no-repeat;
+    grid-column: 3 / 3;
+    grid-row: 3 / 3;
+}
+
+.destaques__categorias {                                                /* En esta seccion se le define el espacio que ocupara las categorias en columnas y filas  */
+    grid-column: 1 / 3;
+    grid-row: 3 / 3;
+}
+
+.destaques__categorias___lista {
+    display: flex;                                                      /*  Configura el posicionamiento estilo flex    */
+    flex-wrap: wrap;                                                    /*  Configura para que ocupa su espacio en una misma linea*/                                         
+    height: 100%;                                                       /*  Definimos la altura de la lista para que ocupe todo el grid aseignado   */
+    justify-content: space-between;                                     /*  Definimos que se haya espaciado entre los items*/
+}
+
+.destaques__categorias___item {
+    align-items: center;                                                /*  Alinea los items en el centro   */
+    background: #fdfdfd;                                              /*  Fondo del grid color blanco   */
+    border-left: 5px solid transparent;                                 /*  */
+    color: #333333;                                                   /*  Color de la letra */
+    display: flex;                                                      /*  Distribucion de los elementos estilo flex   */
+    padding: 1rem;                                                      
+    width: 50%;                                                         /*  Define el ancho del elemento al 50 % para que queden en la mitad*/
+}
+
+.destaques__categorias___link {
+    color: inherit;                                                     /*  Quita el color caracteristico de los link y utiliza el que es asignado por CSS*/
+}
